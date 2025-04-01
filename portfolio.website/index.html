@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b41c1c;
+            color: #0e0d0d;
+        }
+
+        header {
+            background-color: #da1616;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background: rgb(224, 62, 62);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #cf1313;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #867373;
+        }
+      
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>Alfonce Otieno - Digital Literacy Advocate | Software Developer | Community Leader</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="images/me.jpeg" alt="Digital Literacy Training" width="600">
+
+        <p>I'm a passionate digital literacy advocate, software developer, and community leader dedicated to bridging the digital divide and empowering underserved communities. As the Vice Chairperson at GONLINE AFRICA CBO, he leads initiatives focused on digital literacy, financial education, and life-skills training, equipping youth and marginalized groups with the tools to thrive in the digital economy.
+
+            Alfonce also spearheads the LifeLegacy program, a transformative digital literacy initiative that has positively impacted numerous young people by providing hands-on training in web development and essential technology skills. As a Public Relations Officer, he plays a key role in outreach and engagement, ensuring that more individuals access life-changing opportunities.
+            
+            With a deep interest in Bitcoin and blockchain technology, Alfonce is actively involved in Bitcoin protocol development, organizing a 2-day Bitcoin bootcamp to onboard students into the ecosystem. His work in this space includes developing projects using the Bitcoin Lightning Network and experimenting with Bitcoin node interactions.
+            
+            Beyond technology, Alfonce is the founder and host of the Beyond Adversity Podcast, a platform dedicated to inspiring resilience and personal growth. Through powerful storytelling and expert insights, he provides support and motivation to individuals overcoming challenges in various aspects of life.
+            
+            Driven by a vision of inclusive digital empowerment, I continue to push boundaries by training on Google Apps, encryption, and software development, and he is currently working on launching an affordable coding-for-kids program focused on game development.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Areas of Expertice</h2>
+        <ul>
+            <li>Digital Literacy & Web Development</li>
+            <li>Bitcoin & Blockchain Technology</li>
+            <li>Mental Health Advocacy & Resilience</li>
+            <il>Public Speaking & Training</il>
+        </ul>
+        <ul>
+            <h2>Technical Skills:</h2>
+            <li> Web Development, HTML, CSS, JavaScript, Pytho</li>
+            <li>Bitcoin & Blockchain, Bitcoin Protocol Development, Bitcoin Lightning Network, Node Interaction</li>
+            <li>Encryption & Cybersecurity, Data Protection, Privacy, Cryptography</li>
+            <il>Software Development, Application Development, Problem-Solving</il>
+            <li>Game Development for Kids, Teaching coding through game creation</li>
+        </ul>
+        <ul>
+            <h2>Leadership & Training:</h2>
+            <li> Digital Literacy Training, Teaching underserved communities tech skills</li>
+            <li>Workshop & Bootcamp Facilitation, Organizing training sessions on Bitcoin, Google Apps, and web development</li>
+            <il>Program Development, Designing and executing impactful learning programs</il>
+            <li>Public Speaking, Keynote speeches, webinars, and community events</li>
+        </ul>
+        <ul>
+            <h2>Community Engagement & Empowerment:</h2>
+            <li>Mentorship & Coaching, Guiding youth in career and skill development </li>
+            <li>Podcast Hosting, Storytelling, interviewing, and content creation for Beyond Adversity Podcast</li>
+            <il>Public Relations & Communications, Managing outreach, partnerships, and engagement strategies</il>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p><ul>
+            <li><a href="https://www.gonline.africa/life-legacy" target="_blank">LifeLegacy Program</a></li>
+            <li><a href="https://github.com/lifelegacy-alfonce/goran" target="_blank">Goran Piggy Bank</a></li>
+            <li><a href="https://github.com/lifelegacy-alfonce?tab=repositories" target="_blank">GitHub Projects</a></li>
+        </ul></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script>
+        // JavaScript Code
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            alert("Thank you, " + name + "! Your message has been sent.");
+            document.getElementById("contactForm").reset();
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll("nav ul li a").forEach(anchor => {
+            anchor.addEventListener("click", function(event) {
+                event.preventDefault();
+                const section = document.querySelector(this.getAttribute("href"));
+                section.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+</body>
+</html>
